@@ -1,0 +1,133 @@
+GIT - VERSION CONTROL SYSTEM 
+
+
+
+GIT  - Version Control System ( CVS or SVN)
+
+Remote Repository - GitHub, BitBucket and GitLab 
+
+
+
+Git Configuration 
+
+	- System configuration -> git config —system user.name “User Name”
+
+	- Global configuration
+
+	- Local configuration 
+
+Configure the Editor 
+
+Configure the end of line conversation  
+
+	- LF to CRLF - git config —global core.autocrlf true
+
+	- LF to CRLF - git config —global core.autocrlf input
+
+
+
+Commands : 
+
+
+
+Local Repository: 
+
+	git status
+
+	git log 
+
+	git add filename - Stage particular file form the local repository (new file)
+
+	git stage filename - Stage particular file form the local repository(existing file)
+
+	git stage * - stage all the changes 
+
+	git ls-files - List all the staged file
+
+	git ls -a - list hidden file
+
+	git add . - Stage all files from local repository 
+
+	git commit -m “Actual message” 
+
+	git commit -am “Actual Message” - Add and commit 
+
+	git restore -staged filename - unstaging the change from local repository 
+
+	git checkout — filename  - restore the file form current working directory 
+
+STASH - place holder for staged files for work on another stream 
+
+	git stash save NameOfStash - The current staged file will be saved as stash NameOfStash
+
+	git stash list ( Reference is for Stash ID)
+
+ 	git stash apply StashID - To bring back the changes on stash to current staging area 
+
+	git stash drop StashID - Clear the stash after using the stash 
+
+	git stash pop stashID - perform Stash apple and drop commend together 
+
+BRANCH 
+
+	git branch - list branch 
+
+	git brach NewBranch - Create a new branch 
+
+	git checkout -b NewBranch - Another way for creating a new branch 
+
+	git checkout NewBranch	- switch to NewBranch from master branch 
+
+	git merge Newbranch  - Merge the changes on the NewBrach to the master Branch 
+
+	git branch -d NewBranch - Drop or delete the new brach 
+
+PUSH 
+
+	git push bitbucket master
+
+PULL
+
+	git pull bitbucket master - updating the local repository from the remote repository 
+
+CLONE - To copy from remote repository to local repository 
+
+	git clone -b master RemoteRepositoryUrl
+
+REBASE - for the proper sequence for commits based on the timestamp 
+
+	git rebase branchName
+
+IGNORE - add a file .gitignore - ignore these file from uploading to remote repository  .pdf, .log, .class files 
+
+FORK - Closing remote repository to remote repository between 2 different Git Accounts 
+
+	click FORK on your remote repository on another account - The fork will create a remote repository on you Account 
+
+	git clone remoterepositry URL
+
+	
+
+
+
+REMOTE REPOSITORY  - GitHub - Bitbucket - GitLab 
+
+
+
+Remote Repository configuration 
+
+ 	
+
+GITHUB 
+
+	git remote add github ActualGitHubRemoteRepositoryUrl
+
+	git remote show github
+
+
+
+BITBUCKET
+
+	git remote add bitbucket ActualBitbucketRemoteRepositoryUrl
+
+	git remote show bitbucket
